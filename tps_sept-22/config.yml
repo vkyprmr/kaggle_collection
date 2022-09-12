@@ -1,0 +1,14 @@
+# Config file for main.py
+adding_features:
+  train: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/train.csv"
+  test: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/test.csv"
+  save_train: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/train_ext.csv"
+  save_test: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/test_ext.csv"
+
+encode:
+  train: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/train_ext.csv"
+  test: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/test_ext.csv"
+  cols_to_encode: ["store", "product", "country", "day", "season"]
+  save_train: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/train_enc.csv"
+  save_enc: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/encoder.pkl"
+  save_test: "/Users/vickyparmar/data/kaggle/tabular-playground-series-sep-2022/test_enc.csv"
