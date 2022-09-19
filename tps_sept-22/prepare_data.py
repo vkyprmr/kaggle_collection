@@ -8,7 +8,7 @@ Created on: 09-09-2022, Fri, 16:22:27
 """
 """
 Last modified by: vickyparmar
-Last modified on: 09-9-2022, Fri, 17:22:04
+Last modified on: 13-9-2022, Tue, 17:35:25
 """
 
 # Imports
@@ -42,6 +42,10 @@ class AddFeatures:
             -----
             This class is designed specifically for a kaggle competition. Please modify it to adapt it for other projects.
 
+            ToDos
+            ----
+            ToDo: Fine-Tune season according to different countries
+
             Example
             -------
             >>> af = AddFeatures(path_to_df="/path/to/df.csv")
@@ -50,6 +54,7 @@ class AddFeatures:
     def __init__(self, path_to_df):
         """
         Initializing a class instance
+
         Parameters
         ----------
         path_to_df: str or Path
@@ -63,6 +68,7 @@ class AddFeatures:
     def get_day(date):
         """
         Getting the day of the week.
+
         Parameters
         ----------
         date: pd.Timestamp
@@ -82,6 +88,7 @@ class AddFeatures:
     def is_weekend(day):
         """
         Checking whether the day is a weekend.
+
         Parameters
         ----------
         day: str
@@ -101,6 +108,7 @@ class AddFeatures:
     def is_holiday(row):
         """
         Checking whether the day is a holiday.
+
         Parameters
         ----------
         row: pd.Series
@@ -120,6 +128,7 @@ class AddFeatures:
     def get_season(date):
         """
         Getting the season of the year
+
         Parameters
         ----------
         date: pd.Timestamp
@@ -144,6 +153,7 @@ class AddFeatures:
     def add_covid(date):
         """
         Adding if the year was COVID-19 Pandemic year
+
         Parameters
         ----------
         date: pd.Timestamp
@@ -163,6 +173,7 @@ class AddFeatures:
     def add_features(self):
         """
         Adding day, holiday, weekend, and seasonal features.
+
         Returns
         -------
         DataFrame: pd.DataFrame
@@ -204,10 +215,6 @@ class EncodeOneHot:
             -----
             This class is designed specifically for a kaggle competition. Please modify it to adapt it for other projects.
 
-            ToDos
-            ----
-            ToDo: Fine-Tune season according to different countries
-
             Example
             -------
             >>> encoder = EncodeOneHot(path_to_df="path/to/df", cols_to_encode=["col1", "col2"], save_loc="save/path")
@@ -215,7 +222,8 @@ class EncodeOneHot:
             """
     def __init__(self, path_to_df, cols_to_encode, save_loc):
         """
-        Initializing a class instance
+        Initializing a class instance.
+
         Parameters
         ----------
         path_to_df: str or Path
@@ -238,6 +246,7 @@ class EncodeOneHot:
     def encode(self):
         """
         Encodes the dataframe.
+
         Returns
         -------
         DataFrame: pd.DataFrame
